@@ -15,7 +15,7 @@ const SequenceCanvas = () => {
         const loadImages = [];
         for (let i = 0; i < FRAME_COUNT; i++) {
             const img = new Image();
-            img.src = `/high/graded_4K_100_gm_85_1440_3-${String(i + 1).padStart(3, "0")}.jpg`;
+            img.src = `${import.meta.env.MODE === 'development' ? '' : '/job-test'}/high/graded_4K_100_gm_85_1440_3-${String(i + 1).padStart(3, "0")}.jpg`;
             loadImages.push(img);
         }
         images.current = loadImages;
